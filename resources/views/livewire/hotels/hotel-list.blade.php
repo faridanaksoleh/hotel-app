@@ -18,7 +18,17 @@
     
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title"><table class="table table-hover">
+                  <div class="card-title">
+                    <div class="row">
+                      <div class="col-6">
+                        <h5 class="card-title">Hotel List</h5>
+                      </div>
+                      <div class="col-6">
+                        <a wire:navigate href="hotels/create" class="btn btn-primary float-end">Create Hotel</a>
+                      </div>
+                    </div>
+                  </div>
+                  <table class="table table-hover">
                     <thead>
                       <tr>
                         <th scope="col">Name</th>
@@ -42,7 +52,6 @@
                       @endforeach
                     </tbody>
                   </table>
-                </h5>
                 </div>
               </div>
     
