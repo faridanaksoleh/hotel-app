@@ -9,10 +9,13 @@ use Livewire\Component;
 class HotelList extends Component
 {
     #[Title('Hotels')]
+
+    public $search;
+    
     public function render()
     {
         return view('livewire.hotels.hotel-list',[
-            'hotels' => Hotel::all()
+            'hotels' => Hotel::where('address', 'like', '%' . $this->search . '%')->get()
         ]);
     }
 

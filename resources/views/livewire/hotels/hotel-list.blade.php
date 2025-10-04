@@ -21,7 +21,7 @@
                   <div class="card-title">
                     <div class="row">
                       <div class="col-6">
-                        <h5 class="card-title">Hotel List</h5>
+                          <input type="text" class="form-control" wire:model.live.debounce.500ms="search" placeholder="Search">
                       </div>
                       <div class="col-6">
                         <a wire:navigate href="hotels/create" class="btn btn-primary float-end">Create Hotel</a>
