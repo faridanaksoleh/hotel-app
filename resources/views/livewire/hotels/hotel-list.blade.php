@@ -51,7 +51,10 @@
                         <td>{{ $hotel->check_out_time }}</td>
                         <td>
                           <a wire:navigate href="/hotels/{{ $hotel->id }}/edit" class="btn btn-sm btn-warning">Edit</a>
-                          <a wire:click="delete({{ $hotel->id }})" href="" class="btn btn-sm btn-danger">Delete</a>
+                          <button 
+                          wire:click="delete({{ $hotel->id }})" 
+                          wire:confirm="Are you sure you want to delete this hotel?"
+                          class="btn btn-sm btn-danger">Delete</button>
                         </td>
                       </tr>
                       @endforeach

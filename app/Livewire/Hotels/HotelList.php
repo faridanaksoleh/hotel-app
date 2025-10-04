@@ -15,4 +15,12 @@ class HotelList extends Component
             'hotels' => Hotel::all()
         ]);
     }
+
+    public function delete($id)
+    {
+        $hotel = Hotel::find($id);
+        $hotel->delete();
+        return $this->redirect('/hotels', navigate: true);
+    }
+    
 }
