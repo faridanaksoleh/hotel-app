@@ -33,6 +33,9 @@
                       <label for="inputText" class="col-sm-2 col-form-label">Name</label>
                       <div class="col-sm-10">
                         <input wire:model="name" type="text" class="form-control">
+                        @error('name')
+                        <div class="text-danger">{{ $message }}</div>
+                      @enderror
                       </div>
                     </div>
 
@@ -40,6 +43,9 @@
                       <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
                       <div class="col-sm-10">
                         <input wire:model="email" type="email" class="form-control">
+                        @error('email')
+                        <div class="text-danger">{{ $message }}</div>
+                      @enderror
                       </div>
                     </div>
 
@@ -47,6 +53,9 @@
                         <label for="inputPassword" class="col-sm-2 col-form-label">Phone</label>
                         <div class="col-sm-10">
                           <input wire:model="phone" type="text" class="form-control">
+                          @error('phone')
+                          <div class="text-danger">{{ $message }}</div>
+                        @enderror
                         </div>
                       </div>
 
@@ -54,13 +63,19 @@
                         <label for="inputPassword" class="col-sm-2 col-form-label">Address</label>
                         <div class="col-sm-10">
                           <textarea wire:model="address" class="form-control" style="height: 100px"></textarea>
+                          @error('address')
+                          <div class="text-danger">{{ $message }}</div>
+                        @enderror
                         </div>
                       </div>
 
                       <div class="row mb-3">
                         <label for="inputText" class="col-sm-2 col-form-label">Stars</label>
                         <div class="col-sm-10">
-                          <input wire:model="star" type="number" class="form-control">
+                          <input wire:model="stars" type="number" class="form-control">
+                          @error('stars')
+                          <div class="text-danger">{{ $message }}</div>
+                        @enderror
                         </div>
                       </div>
 
@@ -68,6 +83,9 @@
                       <label for="inputDate" class="col-sm-2 col-form-label">Check In Time</label>
                       <div class="col-sm-10">
                         <input wire:model="check_in_time" type="datetime-local" class="form-control">
+                        @error('check_in_time')
+                        <div class="text-danger">{{ $message }}</div>
+                      @enderror
                       </div>
                     </div>
 
@@ -75,6 +93,9 @@
                       <label for="inputTime" class="col-sm-2 col-form-label">Check Out Time</label>
                       <div class="col-sm-10">
                         <input wire:model="check_out_time" type="datetime-local" class="form-control">
+                        @error('check_out_time')
+                        <div class="text-danger">{{ $message }}</div>
+                      @enderror
                       </div>
                     </div>
     
