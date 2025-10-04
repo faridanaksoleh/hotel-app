@@ -37,6 +37,7 @@
                         <th scope="col">Email</th>
                         <th scope="col">Check in Time</th>
                         <th scope="col">Check out Time</th>
+                        <th scope="col">Action</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -48,6 +49,10 @@
                         <td>{{ $hotel->email }}</td>
                         <td>{{ $hotel->check_in_time }}</td>
                         <td>{{ $hotel->check_out_time }}</td>
+                        <td>
+                          <a wire:navigate href="/hotels/{{ $hotel->id }}/edit" class="btn btn-sm btn-warning">Edit</a>
+                          <a wire:click="delete({{ $hotel->id }})" href="" class="btn btn-sm btn-danger">Delete</a>
+                        </td>
                       </tr>
                       @endforeach
                     </tbody>
