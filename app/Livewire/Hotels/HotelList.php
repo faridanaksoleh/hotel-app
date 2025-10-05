@@ -18,7 +18,7 @@ class HotelList extends Component
     public function render()
     {
         return view('livewire.hotels.hotel-list',[
-            'hotels' => Hotel::where('address', 'like', '%' . $this->search . '%')->paginate(2)
+            'hotels' => Hotel::where('address', 'like', '%' . $this->search . '%')->paginate(10)
         ]);
     }
 
@@ -27,6 +27,11 @@ class HotelList extends Component
         $hotel = Hotel::find($id);
         $hotel->delete();
         return $this->redirect('/hotels', navigate: true);
+    }
+
+    public function updatingSearch()
+    {
+        $this->gotoPage(1);
     }
     
 }
